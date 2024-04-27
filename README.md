@@ -12,6 +12,6 @@
 - Ter acesso as atas das reuniões do condomínio
 
 
-## OBS: Esse aplicativo foi criado e está em processo de implementação como requisito para a disciplina de fundamentos de programação aplicada, referente ao programa de pós-graduação em informática aplicada da universidade federal rural de Pernambuco.
+### OBS: Esse aplicativo foi criado e está em processo de implementação como requisito para a disciplina de fundamentos de programação aplicada, referente ao programa de pós-graduação em informática aplicada da universidade federal rural de Pernambuco.
 
 #### Discente: Carlos Manoel Nunes e Silva
