@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './loginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,16 +11,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const appTitulo = 'Residence';
     return MaterialApp(
-      title: 'Residence',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 31, 5, 77)),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Residence'),
-      body: const MyLogin()
+      title: appTitulo,
+      home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 63, 35, 223),
+        appBar: AppBar(title: Text(appTitulo),),
+        body: MyLogin(),
+      ), 
     );
   }
+
+  
 }
 
 class MyHomePage extends StatefulWidget {
@@ -89,22 +92,3 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class MyLogin extends StatelessWidget {
-  const MyLogin({super.key});
-  @override
-  Widget build(BuildContext context){
-    return Column(crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-        child: TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            hintText: 'Login',
-          ),
-        ),
-      )
-    ],
-    );
-  }
-}
