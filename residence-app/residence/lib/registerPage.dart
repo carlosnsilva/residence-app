@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import './registerPage.dart';
 
-class MyLogin extends StatelessWidget {
-  const MyLogin({super.key});
+class RegisterUser extends StatelessWidget{
+  const RegisterUser({super.key});
   @override
   Widget build(BuildContext context){
     return Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
@@ -13,7 +11,34 @@ class MyLogin extends StatelessWidget {
         child: TextField(
           decoration: InputDecoration(
             border: OutlineInputBorder(),
-            hintText: 'Login'
+            hintText: 'Nome'
+          ),
+        ),
+      ),
+      const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 150, vertical: 25),
+        child: TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            hintText: 'Bloco',
+          ),
+        ),
+      ),
+      const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 150, vertical: 25),
+        child: TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            hintText: 'Apto/Casa',
+          ),
+        ),
+      ),
+      const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 150, vertical: 25),
+        child: TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            hintText: 'E-mail',
           ),
         ),
       ),
@@ -36,7 +61,7 @@ class MyLogin extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 200, vertical: 20)
         ),
         child: const Text(
-          'Entrar',
+          'Cadastrar',
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,
@@ -46,19 +71,15 @@ class MyLogin extends StatelessWidget {
         ),
       ElevatedButton(
         onPressed: (){
-          Navigator.of(context).push(
-            MaterialPageRoute<SecondPage>(
-              builder: (BuildContext context) => const SecondPage(),
-              ),
-              ); 
+          Navigator.of(context).pop();
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.white,
           elevation: 6,
           padding: EdgeInsets.symmetric(horizontal: 200, vertical: 20)
         ),
         child: const Text(
-          'Cadastre-se',
+          'Voltar',
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,
@@ -71,18 +92,3 @@ class MyLogin extends StatelessWidget {
   }
 }
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    const appTitulo = 'Residence';
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 63, 35, 223),
-      appBar: AppBar(title: Text(appTitulo),),
-      body: Center(
-        child: RegisterUser()
-      ),
-    );
-  }
-} 
