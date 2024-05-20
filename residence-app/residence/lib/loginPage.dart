@@ -9,7 +9,7 @@ class MyLogin extends StatelessWidget {
     return Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
       const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 150, vertical: 25),
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: TextField(
           decoration: InputDecoration(
             border: OutlineInputBorder(),
@@ -18,7 +18,7 @@ class MyLogin extends StatelessWidget {
         ),
       ),
       const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 150, vertical: 25),
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: TextField(
           decoration: InputDecoration(
             border: OutlineInputBorder(),
@@ -26,6 +26,7 @@ class MyLogin extends StatelessWidget {
           ),
         ),
       ),
+      
       ElevatedButton(
         onPressed: (){
           // Adicionar ação quando pressionar o botão
@@ -33,7 +34,7 @@ class MyLogin extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green,
           elevation: 6,
-          padding: EdgeInsets.symmetric(horizontal: 200, vertical: 20)
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20)
         ),
         child: const Text(
           'Entrar',
@@ -55,7 +56,7 @@ class MyLogin extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green,
           elevation: 6,
-          padding: EdgeInsets.symmetric(horizontal: 200, vertical: 20)
+          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20)
         ),
         child: const Text(
           'Cadastre-se',

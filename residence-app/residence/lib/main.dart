@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 63, 35, 223),
         appBar: AppBar(title: Text(appTitulo),),
         body: MyLogin(),
+        //body: Image.asset('assets/images/logo-1.png'),
       ), 
     );
   }
