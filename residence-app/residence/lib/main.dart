@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitulo,
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 99, 127, 253),
+        backgroundColor: Color.fromARGB(255, 195, 213, 229),
         appBar: AppBar(title: const Text(appTitulo),),
         body: const MyLogin()
       ), 

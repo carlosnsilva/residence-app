@@ -60,7 +60,7 @@ class MyLogin extends StatelessWidget {
               ); 
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Color.fromARGB(255, 212, 240, 55),
+          backgroundColor: Color.fromARGB(255, 51, 49, 126),
           elevation: 6,
           padding: EdgeInsetsDirectional.all(8)
         ),
@@ -85,7 +85,7 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     const appTitulo = 'Residence';
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 99, 127, 253),
+      backgroundColor: Color.fromARGB(255, 195, 213, 229),
       appBar: AppBar(title: Text(appTitulo),),
       body: Center(
         child: RegisterUser()
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 99, 127, 253),
+      backgroundColor: Color.fromARGB(255, 195, 213, 229),
       body: Center(
         child: homeUser()
       ),
