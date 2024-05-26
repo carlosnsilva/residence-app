@@ -4,8 +4,9 @@ class RegisterUser extends StatelessWidget{
   const RegisterUser({super.key});
   @override
   Widget build(BuildContext context){
-    return Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
+    return ListView(
+      padding: const EdgeInsets.all(8),
+      children: <Widget>[
       const Padding(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: TextField(
