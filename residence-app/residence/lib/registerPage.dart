@@ -59,7 +59,7 @@ class RegisterUser extends StatelessWidget{
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green,
           elevation: 6,
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20)
+          padding: EdgeInsetsDirectional.all(8)
         ),
         child: const Text(
           'Cadastrar',
@@ -75,9 +75,9 @@ class RegisterUser extends StatelessWidget{
           Navigator.of(context).pop();
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 146, 143, 143),
           elevation: 6,
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20)
+          padding: EdgeInsetsDirectional.all(8)
         ),
         child: const Text(
           'Voltar',

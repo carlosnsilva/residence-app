@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 63, 35, 223),
         appBar: AppBar(title: const Text(appTitulo),),
-        body: const MyLogin(),
-        //body: Image.asset('assets/images/logo-1.png'),
+        body: const MyLogin()
       ), 
     );
   }

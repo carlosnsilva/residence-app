@@ -5,8 +5,10 @@ class MyLogin extends StatelessWidget {
   const MyLogin({super.key});
   @override
   Widget build(BuildContext context){
-    return Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
+    return ListView(
+      padding: const EdgeInsets.all(8),
+      children: <Widget>[
+      Image.asset('assets/images/logo-1.png', width: 200.00, height: 300.00, scale: 0.2 ,fit: BoxFit.cover),  
       const Padding(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: TextField(
@@ -33,7 +35,7 @@ class MyLogin extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green,
           elevation: 6,
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20)
+          padding: EdgeInsetsDirectional.all(8)
         ),
         child: const Text(
           'Entrar',
@@ -53,9 +55,9 @@ class MyLogin extends StatelessWidget {
               ); 
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.green,
+          backgroundColor: Color.fromARGB(255, 212, 240, 55),
           elevation: 6,
-          padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20)
+          padding: EdgeInsetsDirectional.all(8)
         ),
         child: const Text(
           'Cadastre-se',
@@ -85,4 +87,4 @@ class SecondPage extends StatelessWidget {
       ),
     );
   }
-} 
+}
