@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './registerPage.dart';
+import './homePage.dart';
 
 class MyLogin extends StatelessWidget {
   const MyLogin({super.key});
@@ -30,7 +31,11 @@ class MyLogin extends StatelessWidget {
       
       ElevatedButton(
         onPressed: (){
-          // Adicionar ação quando pressionar o botão
+          Navigator.of(context).push(
+            MaterialPageRoute<HomePage>(
+              builder: (BuildContext context) => const HomePage(),
+              ),
+          );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green,
@@ -80,10 +85,24 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     const appTitulo = 'Residence';
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 63, 35, 223),
+      backgroundColor: Color.fromARGB(255, 99, 127, 253),
       appBar: AppBar(title: Text(appTitulo),),
       body: Center(
         child: RegisterUser()
+      ),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 99, 127, 253),
+      body: Center(
+        child: homeUser()
       ),
     );
   }
