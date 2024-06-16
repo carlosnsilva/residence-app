@@ -83,10 +83,8 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const appTitulo = 'Residence';
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 195, 213, 229),
-      appBar: AppBar(title: Text(appTitulo),),
       body: Center(
         child: RegisterUser()
       ),

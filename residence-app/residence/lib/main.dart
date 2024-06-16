@@ -11,12 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const appTitulo = 'Residence';
     return MaterialApp(
-      title: appTitulo,
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 195, 213, 229),
-        appBar: AppBar(title: const Text(appTitulo),),
         body: const MyLogin()
       ), 
     );

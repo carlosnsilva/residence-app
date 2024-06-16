@@ -54,7 +54,7 @@ class RegisterUser extends StatelessWidget{
       ),
       ElevatedButton(
         onPressed: (){
-          // Adicionar ação quando pressionar o botão
+          Navigator.of(context).pop();
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.green,

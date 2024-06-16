@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './spacePage.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key : key);
@@ -26,6 +27,13 @@ class createMenu extends State<Menu> {
           PopupMenuItem(
             child: Text(item1),
             value: item1,
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute<placePage>(
+                  builder: (BuildContext context) => const placePage(),
+                  ),
+                );
+            },
             ),
           PopupMenuItem(
             child: Text(item2),
@@ -52,6 +60,20 @@ class createMenu extends State<Menu> {
             value: item7,
             ),    
         ],
+      ),
+    );
+  }
+}
+
+class placePage extends StatelessWidget {
+  const placePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 195, 213, 229),
+      body: Center(
+        child: spacePlace()
       ),
     );
   }

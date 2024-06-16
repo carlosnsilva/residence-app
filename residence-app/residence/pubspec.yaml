@@ -94,4 +94,7 @@ flutter:
 
   assets:
     - assets/images/logo-1.png
+    - assets/images/campo-society.jpg
+    - assets/images/quadra.jpg
+    - assets/images/salao-festa.jpg
 
