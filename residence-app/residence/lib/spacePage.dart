@@ -9,9 +9,6 @@ class spacePlace extends StatelessWidget{
       padding: const EdgeInsets.all(8),
       children: <Widget>[
         Padding(
-          padding: EdgeInsetsDirectional.only(top: 60)
-        ),
-        Padding(
           padding: EdgeInsetsDirectional.all(5),
           child: Column(
             mainAxisSize: MainAxisSize.min,

@@ -10,7 +10,7 @@ class homeUser extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       children: <Widget>[
         Padding(
-          padding: EdgeInsetsDirectional.all(8),
+          padding: EdgeInsets.only(top: 25),
           child: Menu()
         ),
         Padding(
@@ -46,3 +46,24 @@ class homeUser extends StatelessWidget {
   }
 }
 
+class MenuPage extends StatelessWidget {
+  const MenuPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
+      backgroundColor: Color.fromARGB(255, 195, 213, 229),
+      body: Center(
+        child: Menu()
+      ),
+    );
+  }
+}

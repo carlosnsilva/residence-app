@@ -9,7 +9,6 @@ class Menu extends StatefulWidget {
 }
 
 class createMenu extends State<Menu> {
-  String titleName = 'Menu';
   String item1 = 'Espaços';
   String item2 = 'Comunicados';
   String item3 = 'Assembleias';
@@ -21,7 +20,6 @@ class createMenu extends State<Menu> {
   @override
   Widget build(BuildContext context){
     return ListTile(
-      title: Text(titleName),
       trailing: PopupMenuButton(
         itemBuilder: (context) => [
           PopupMenuItem(
@@ -71,6 +69,15 @@ class placePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 195, 213, 229),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
       backgroundColor: Color.fromARGB(255, 195, 213, 229),
       body: Center(
         child: spacePlace()

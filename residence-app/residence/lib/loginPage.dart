@@ -84,6 +84,15 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 195, 213, 229),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
       backgroundColor: Color.fromARGB(255, 195, 213, 229),
       body: Center(
         child: RegisterUser()
