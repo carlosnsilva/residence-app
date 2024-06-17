@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import './reserveCampoPage.dart';
+import './reserveQuadraPage.dart';
+import './reserveSalaoPage.dart';
 
 class spacePlace extends StatelessWidget{
   const spacePlace({super.key});
@@ -22,7 +25,11 @@ class spacePlace extends StatelessWidget{
               ),
               ElevatedButton(
                 onPressed: (){
-                  //Adicionar a ação
+                  Navigator.of(context).push(
+                  MaterialPageRoute<quadraPageCampo>(
+                  builder: (BuildContext context) => const quadraPageCampo(),
+                  ),
+                );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
@@ -51,7 +58,11 @@ class spacePlace extends StatelessWidget{
               ),
               ElevatedButton(
                 onPressed: (){
-                  //Adicionar a ação
+                  Navigator.of(context).push(
+                  MaterialPageRoute<salaoPageCampo>(
+                  builder: (BuildContext context) => const salaoPageCampo(),
+                  ),
+                );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
@@ -80,7 +91,11 @@ class spacePlace extends StatelessWidget{
               ),
               ElevatedButton(
                 onPressed: (){
-                  //Adicionar a ação
+                  Navigator.of(context).push(
+                MaterialPageRoute<reservePageCampo>(
+                  builder: (BuildContext context) => const reservePageCampo(),
+                  ),
+                );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
@@ -98,5 +113,73 @@ class spacePlace extends StatelessWidget{
       ],
     );
   }
+}
 
+class reservePageCampo extends StatelessWidget {
+  const reservePageCampo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 195, 213, 229),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
+      backgroundColor: Color.fromARGB(255, 195, 213, 229),
+      body: Center(
+        child: campoPlaceReserve()
+      ),
+    );
+  }
+}
+
+class quadraPageCampo extends StatelessWidget {
+  const quadraPageCampo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 195, 213, 229),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
+      backgroundColor: Color.fromARGB(255, 195, 213, 229),
+      body: Center(
+        child: quadraPlaceReserve()
+      ),
+    );
+  }
+}
+
+class salaoPageCampo extends StatelessWidget {
+  const salaoPageCampo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 195, 213, 229),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
+      backgroundColor: Color.fromARGB(255, 195, 213, 229),
+      body: Center(
+        child: salaoPlaceReserve()
+      ),
+    );
+  }
 }

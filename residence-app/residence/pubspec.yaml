@@ -39,6 +39,9 @@ dependencies:
   # Realiza transição entre as telas
   page_transition: "^2.1.0"
 
+  flutter_cupertino_datetime_picker: ^3.0.0
+  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
