@@ -1,27 +1,32 @@
 import 'package:flutter/material.dart';
 import './registerPage.dart';
 import './homePage.dart';
+import './snackBarPage.dart';
 
 class MyLogin extends StatelessWidget {
   const MyLogin({super.key});
   @override
   Widget build(BuildContext context){
     return ListView(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(5),
       children: <Widget>[
-      Image.asset('assets/images/logo-1.png', width: 200.00, height: 300.00, scale: 0.2 ,fit: BoxFit.cover),  
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 40),
+          child: Image.asset('assets/images/logo-1.png', width: 200.00, height: 300.00, scale: 0.2 ,fit: BoxFit.cover),    
+          ),
       const Padding(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: TextField(
           decoration: InputDecoration(
             border: OutlineInputBorder(),
-            hintText: 'Login'
+            hintText: 'E-mail'
           ),
         ),
       ),
       const Padding(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: TextField(
+          obscureText: true,
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             hintText: 'Senha',
@@ -31,6 +36,7 @@ class MyLogin extends StatelessWidget {
       
       ElevatedButton(
         onPressed: (){
+          mostrarSnackBar(context: context, texto: 'Login Realizado Com Sucesso');
           Navigator.of(context).push(
             MaterialPageRoute<HomePage>(
               builder: (BuildContext context) => const HomePage(),

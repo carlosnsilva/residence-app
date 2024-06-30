@@ -32,7 +32,8 @@ class homeUser extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Image.network('https://www.tinyurl.com/5n8ywvw3'), const SizedBox(height: 10), Row(
+              Image.asset('assets/images/quadra.jpg', width: 400.00, height: 160.00, scale: 0.2 ,fit: BoxFit.cover),
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text('Últimas Reservas', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)

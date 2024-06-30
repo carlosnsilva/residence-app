@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './snackBarPage.dart';
 
 class RegisterUser extends StatelessWidget{
   const RegisterUser({super.key});
@@ -46,6 +47,7 @@ class RegisterUser extends StatelessWidget{
       const Padding(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: TextField(
+          obscureText: true,
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             hintText: 'Senha',
@@ -54,6 +56,7 @@ class RegisterUser extends StatelessWidget{
       ),
       ElevatedButton(
         onPressed: (){
+          mostrarSnackBar(context: context, texto: 'Cadastro Realizado Com Sucesso');
           Navigator.of(context).pop();
         },
         style: ElevatedButton.styleFrom(
